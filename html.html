@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,
+    300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="header_text">ЩОДЕННИЙ РОЗКЛАД</div>
+</header>
+
+<div class="container">
+    <input type="text" class="input">
+
+    <div class="radio-group">
+        <label for="all">УСІ<input type="radio" id="all" name="drone" checked /></label>
+        <label for="execute">ВИКОНАНІ<input type="radio" id="execute" name="drone" /></label>
+        <label for="unfulfilled">НЕВИКОНАНІ<input type="radio" id="unfulfilled" name="drone" /></label>
+    </div>
+
+    <div class="list-container">
+        <ul class="spisok"></ul>
+    </div>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>
