@@ -1,9 +1,12 @@
-@media(max-width: 480px)  {
-  .header_text {
-    width: 90%;
-    font-size: 18px;
-    height: auto;
+@media (max-width: 390px) {
+  body {
     background-color: red;
+  }
+
+  .header_text {
+    font-size: 50px;
+    color: red;
+    width: 90%;
   }
 
   .input {
@@ -15,5 +18,4 @@
     width: 100%;
     font-size: 18px;
   }
-
 }
