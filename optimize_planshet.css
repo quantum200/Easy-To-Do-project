@@ -1,0 +1,41 @@
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  body .header_text {
+    width: 65%;
+    font-size: 25px;
+  }
+  .input {
+    width: 60%;
+    font-size: 18px;
+    align-items: center;
+    height: 40px;
+  }
+  button {
+    width: 100%;
+    font-size: 18px;
+  }
+  .radio-group label {
+    font-size: 17px;
+  }
+  .radio-group input[type=radio] {
+    margin-left: 8px;
+  }
+  .list-container {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=optimize_planshet.css.map */
