@@ -4,7 +4,8 @@ $input-bg: #f9f9f9;
 $accent-color: #4CAF50;
 $btn-bg: rgba(21, 105, 98, 0.55);
 
-body {
+
+html, body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,7 +19,7 @@ body {
   font-size: 15px;
   color: $main-color;
   font-style: normal;
-  overflow: auto;
+  overflow-x: hidden
 }
 
 header {

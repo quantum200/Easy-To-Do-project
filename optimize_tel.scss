@@ -1,21 +1,46 @@
-@media (max-width: 390px) {
-  body {
-    background-color: red;
+@media (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .header_text {
-    font-size: 50px;
-    color: red;
-    width: 90%;
+  body{
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  body .header_text {
+    width: 65%;
+    font-size: 20px;
   }
 
   .input {
-    width: 100%;
+    width: 60%;
     font-size: 18px;
+    align-items: center;
   }
 
   button {
     width: 100%;
     font-size: 18px;
+  }
+
+  .radio-group label {
+    font-size: 15px;
+  }
+
+  .radio-group input[type="radio"] {
+    margin-left: 8px;
+  }
+
+  .list-container{
+    width: 100%;
   }
 }
