@@ -93,6 +93,11 @@ function handleTaskInput(event) {
     input.value = '';
 }
 
+function clearAll(){
+    localStorage.clear();
+    ul.innerHTML = '';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     loadTasks();
     input.addEventListener('keydown', (event) => {

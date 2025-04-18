@@ -13,9 +13,13 @@
     padding: 0 10px;
     box-sizing: border-box;
   }
-  body .header_text {
+  body header .header_text {
     width: 65%;
     font-size: 25px;
+  }
+  body header .header_button {
+    height: 30px;
+    font-size: 15px;
   }
   .input {
     width: 60%;

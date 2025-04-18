@@ -16,8 +16,15 @@
     box-sizing: border-box;
   }
 
-  body header .header_text {
-    font-size: 15px;
+  body header{
+    .header_text {
+      font-size: 15px;
+    }
+
+    .header_button{
+      height: 30px;
+      font-size: 15px;
+    }
   }
 
   .input {
@@ -48,8 +55,15 @@
 
 
 @media (max-width: 425px) {
-  body header .header_text{
-    font-size: 18px;
+  body header{
+    .header_text{
+      font-size: 18px;
+    }
+
+    .header_button{
+      height: 30px;
+      font-size: 15px;
+    }
   }
 
   .spisok li {
