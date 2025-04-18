@@ -3,9 +3,11 @@ const ul = document.getElementById('spisok');
 const listContainer = document.querySelector('.list-container');
 const radioButtons = document.querySelectorAll('input[name="drone"]');
 
+
 function loadTasks() {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
     tasks.forEach(task => addTask(task.text, task.completed));
+    listContainer.style.display = tasks.length > 0 ? 'block' : 'none';
 }
 
 function saveTasks() {
@@ -80,7 +82,7 @@ function toggleItems() {
 
     listItems.forEach(item => {
         const itemStatus = item.getAttribute('data-status');
-        item.style.display = (selectedStatus === 'all' || selectedStatus === itemStatus) ? 'list-item' : 'none';
+        item.style.display = (selectedStatus === 'all' || selectedStatus === itemStatus) ? 'flex' : 'none'; // Изменено: используем flex вместо list-item
     });
 }
 
@@ -93,9 +95,10 @@ function handleTaskInput(event) {
     input.value = '';
 }
 
-function clearAll(){
+function clearAll() {
     localStorage.clear();
     ul.innerHTML = '';
+    listContainer.style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

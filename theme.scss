@@ -1,0 +1,35 @@
+$dark-bg: #121212;
+$dark-color: white;
+$light-bg: #FDF5E6;
+$light-color: #696969;
+
+:root {
+  --background-color: #{$light-bg};
+  --color: #{$light-color};
+}
+
+body.theme-dark {
+  --background-color: #{$dark-bg};
+  --color: #{$dark-color};
+}
+
+body.theme-light {
+  --background-color: #{$light-bg};
+  --color: #{$light-color};
+}
+
+body.theme-auto {
+  --background-color: #{$light-bg};
+  --color: #{$light-color};
+
+  @media (prefers-color-scheme: dark) {
+    --background-color: #{$dark-bg};
+    --color: #{$dark-color};
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
