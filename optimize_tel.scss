@@ -18,10 +18,7 @@
 
   body header{
     .header_text {
-      color: var(--color);
-      background-color: white;
-      -webkit-text-stroke: 1px white;
-      font-size: 10px;
+      font-size: 16px !important;
     }
 
     .header_button{
@@ -88,7 +85,7 @@
 @media (max-width: 425px) {
   body header{
     .header_text{
-      font-size: 18px;
+      font-size: 18px !important;
     }
 
     .header_button{

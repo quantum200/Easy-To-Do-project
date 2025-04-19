@@ -14,7 +14,7 @@
     box-sizing: border-box;
   }
   body header .header_text {
-    font-size: 15px;
+    font-size: 16px !important;
   }
   body header .header_button {
     height: 30px;
@@ -38,10 +38,35 @@
   .list-container {
     width: 100%;
   }
+  .theme-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .theme-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #d1b3ff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .theme-buttons button:hover {
+    background-color: #b68dff;
+  }
 }
 @media (max-width: 425px) {
   body header .header_text {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   body header .header_button {
     height: 30px;
@@ -52,6 +77,31 @@
     overflow-wrap: break-word;
     white-space: normal;
     max-width: 90%;
+  }
+  .theme-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .theme-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #d1b3ff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .theme-buttons button:hover {
+    background-color: #b68dff;
   }
 }
 @media (max-width: 480px) {
