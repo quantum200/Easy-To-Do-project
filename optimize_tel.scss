@@ -18,7 +18,10 @@
 
   body header{
     .header_text {
-      font-size: 15px;
+      color: var(--color);
+      background-color: white;
+      -webkit-text-stroke: 1px white;
+      font-size: 10px;
     }
 
     .header_button{
@@ -49,8 +52,36 @@
   .list-container{
     width: 100%;
   }
-}
 
+  .theme-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .theme-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #d1b3ff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .theme-buttons button:hover {
+    background-color: #b68dff;
+  }
+}
 
 
 
@@ -71,6 +102,35 @@
     overflow-wrap: break-word;
     white-space: normal;
     max-width: 90%;
+  }
+
+  .theme-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .theme-buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #d1b3ff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .theme-buttons button:hover {
+    background-color: #b68dff;
   }
 }
 
