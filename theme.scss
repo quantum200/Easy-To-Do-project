@@ -1,30 +1,45 @@
-$dark-bg: #121212;
+$dark-bg: #121212AD;
 $dark-color: white;
+$dark-accent: #BB86FC;
+$dark-input-bg: #2A2A2A;
+
 $light-bg: #FDF5E6;
 $light-color: #696969;
+$light-accent: #4CAF50;
+$light-input-bg: #f9f9f9;
 
 :root {
   --background-color: #{$light-bg};
   --color: #{$light-color};
+  --accent-color: #{$light-accent};
+  --input-bg: #{$light-input-bg};
 }
 
 body.theme-dark {
   --background-color: #{$dark-bg};
   --color: #{$dark-color};
+  --accent-color: #{$dark-accent};
+  --input-bg: #{$dark-input-bg};
 }
 
 body.theme-light {
   --background-color: #{$light-bg};
   --color: #{$light-color};
+  --accent-color: #{$light-accent};
+  --input-bg: #{$light-input-bg};
 }
 
 body.theme-auto {
   --background-color: #{$light-bg};
   --color: #{$light-color};
+  --accent-color: #{$light-accent};
+  --input-bg: #{$light-input-bg};
 
   @media (prefers-color-scheme: dark) {
     --background-color: #{$dark-bg};
     --color: #{$dark-color};
+    --accent-color: #{$dark-accent};
+    --input-bg: #{$dark-input-bg};
   }
 }
 
@@ -32,4 +47,23 @@ body {
   background-color: var(--background-color);
   color: var(--color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--color);
+}
+
+.input {
+  background-color: var(--input-bg);
+  color: var(--color);
+  border-color: var(--accent-color);
+}
+
+.list-container {
+  background-color: var(--input-bg);
+}
+
+.radio-group label {
+  color: var(--color);
 }

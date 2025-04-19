@@ -17,41 +17,53 @@ const setTheme = (mode) => {
 
     switch (mode) {
         case theme.dark: {
-            document.body.classList.add(darkThemeClass);
-            document.body.classList.remove(lightThemeClass);
+            document.body.classList.add("theme-dark");
+            document.body.classList.remove("theme-light");
+            document.body.classList.remove("theme-auto");
+            document.body.style.backgroundColor = "#121212";
 
-            themedark.classList.add(classButtonSelected);
-            themelight.classList.remove(classButtonSelected);
-            themeauto.classList.remove(classButtonSelected);
+            themedark.classList.add("button-selected");
+            themelight.classList.remove("button-selected");
+            themeauto.classList.remove("button-selected");
             return;
         }
 
         case theme.light: {
-            document.body.classList.add(lightThemeClass);
-            document.body.classList.remove(darkThemeClass);
+            document.body.classList.add("theme-light");
+            document.body.classList.remove("theme-dark");
+            document.body.classList.remove("theme-auto");
+            document.body.style.backgroundColor = "#FDF5E6";
+            document.body.style.color = "#696969";
 
-            themelight.classList.add(classButtonSelected);
-            themedark.classList.remove(classButtonSelected);
-            themeauto.classList.remove(classButtonSelected);
+            themelight.classList.add("button-selected");
+            themedark.classList.remove("button-selected");
+            themeauto.classList.remove("button-selected");
             return;
         }
 
         case theme.auto:
         default: {
+            document.body.classList.add("theme-auto");
+            document.body.classList.remove("theme-dark");
+            document.body.classList.remove("theme-light");
+
             const isDark = window.matchMedia &&
                 window.matchMedia('(prefers-color-scheme: dark)').matches;
 
             if (isDark) {
-                document.body.classList.add(darkThemeClass);
-                document.body.classList.remove(lightThemeClass);
+                document.body.classList.add("theme-dark");
+                document.body.classList.remove("theme-light");
+                document.body.style.backgroundColor = "#121212";
             } else {
-                document.body.classList.add(lightThemeClass);
-                document.body.classList.remove(darkThemeClass);
+                document.body.classList.add("theme-light");
+                document.body.classList.remove("theme-dark");
+                document.body.style.backgroundColor = "#FDF5E6";
+                document.body.style.color = "#696969";
             }
 
-            themeauto.classList.add(classButtonSelected);
-            themelight.classList.remove(classButtonSelected);
-            themedark.classList.remove(classButtonSelected);
+            themeauto.classList.add("button-selected");
+            themelight.classList.remove("button-selected");
+            themedark.classList.remove("button-selected");
         }
     }
 };

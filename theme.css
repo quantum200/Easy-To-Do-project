@@ -1,3 +1,62 @@
+:root {
+  --background-color: #FDF5E6;
+  --color: #696969;
+  --accent-color: #4CAF50;
+  --input-bg: #f9f9f9;
+}
 
+body.theme-dark {
+  --background-color: rgba(18, 18, 18, 0.6784313725);
+  --color: white;
+  --accent-color: #BB86FC;
+  --input-bg: #2A2A2A;
+}
+
+body.theme-light {
+  --background-color: #FDF5E6;
+  --color: #696969;
+  --accent-color: #4CAF50;
+  --input-bg: #f9f9f9;
+}
+
+body.theme-auto {
+  --background-color: #FDF5E6;
+  --color: #696969;
+  --accent-color: #4CAF50;
+  --input-bg: #f9f9f9;
+}
+@media (prefers-color-scheme: dark) {
+  body.theme-auto {
+    --background-color: rgba(18, 18, 18, 0.6784313725);
+    --color: white;
+    --accent-color: #BB86FC;
+    --input-bg: #2A2A2A;
+  }
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--color);
+}
+
+.input {
+  background-color: var(--input-bg);
+  color: var(--color);
+  border-color: var(--accent-color);
+}
+
+.list-container {
+  background-color: var(--input-bg);
+}
+
+.radio-group label {
+  color: var(--color);
+}
 
 /*# sourceMappingURL=theme.css.map */
